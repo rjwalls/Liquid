@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkSimulator.Bll", "NetworkSimulator\NetworkSimulator.Bll.csproj", "{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkSimulator.Con", "TestConsole\NetworkSimulator.Con.csproj", "{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole1", "TestConsole1\TestConsole1.csproj", "{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Temp|Any CPU = Temp|Any CPU
+		Temp2|Any CPU = Temp2|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}.Temp|Any CPU.ActiveCfg = Temp|Any CPU
+		{A787AE8F-D2B5-4B2D-9095-E7C92F439A2D}.Temp2|Any CPU.ActiveCfg = Temp|Any CPU
+		{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}.Temp|Any CPU.ActiveCfg = Temp|Any CPU
+		{FB32CFEA-E192-4F34-B2C2-9765B8C02F48}.Temp2|Any CPU.ActiveCfg = Temp|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Temp|Any CPU.ActiveCfg = Release|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Temp|Any CPU.Build.0 = Release|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Temp2|Any CPU.ActiveCfg = Temp2|Any CPU
+		{F74DDAEE-B70C-46FA-8CE7-16D168FDB412}.Temp2|Any CPU.Build.0 = Temp2|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
