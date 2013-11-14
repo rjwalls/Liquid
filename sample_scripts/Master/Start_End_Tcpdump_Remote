@@ -1,0 +1,46 @@
+echo Run using SUDO!!!
+
+NOTIFICATION_EMAIL=<YOUR_EMAIL>
+NOTIFICATION_EMAIL_BAK=<YOUR_OTHER_EMAIL>
+
+GQ_USER=some_username
+GQ_LOCAL=192.168.1.112
+GQ_REMOTE=someurl.kittenwar.com
+GQ_PORT=6690
+SSH_DELAY=/SshDelay/./SshDelay_v3
+
+TEMP_FILE=temp.txt
+
+echo Input File: $DELAY_INPUT_FILE
+
+#Create a new directory for the results
+RESULT_DIR=`date '+%m%d%y_%H%M%S'`
+mkdir ~/Documents/Research/Results/$RESULT_DIR
+echo Created Directory: ~/Documents/Research/Results/$RESULT_DIR
+
+#Start tcpdump on the remote machine
+echo Starting tcpdump on $GQ_LOCAL
+ssh -p $GQ_PORT $GQ_USER@$GQ_LOCAL < ../Master/Start_Tcpdump > $TEMP_FILE
+
+#Start tcpdump on local machine
+echo Starting tcpdump on Local
+sudo tcpdump -i eth0 -q port 6690 > ~/Documents/Research/Results/$RESULT_DIR/capture_local.txt & > $TEMP_FILE
+
+echo Sending the IPDs:
+echo $DELAY_INPUT_FILE
+#Here we need to start sending the IPDs
+$SSH_DELAY < $DELAY_INPUT_FILE | ssh -p $GQ_PORT $GQ_USER@$GQ_REMOTE
+
+#Stop tcpdump on the local machine
+echo Ending tcpdump on Local
+sudo kill -9 `pgrep tcpdump` > $TEMP_FILE
+
+#Stop tcpdump on the remote machine
+echo Ending tcpdump on $GQ_LOCAL
+ssh -p $GQ_PORT $GQ_USER@$GQ_LOCAL < ../Master/End_Tcpdump > $TEMP_FILE
+
+#Send Notification email
+echo $DELAY_INPUT_FILE | mail -s "Set Finished" $NOTIFICATION_EMAIL
+echo $DELAY_INPUT_FILE | mail -s "Set Finished" $NOTIFICATION_EMAIL_BAK
+
+#finished! :)

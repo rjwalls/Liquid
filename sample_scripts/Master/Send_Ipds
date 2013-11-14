@@ -1,0 +1,12 @@
+GQ_USER=some_username
+GQ_LOCAL=192.168.1.105
+GQ_REMOTE=someurl.kittenwar.com
+GQ_PORT=6690
+SSH_DELAY=~/Documents/Research/NetworkSimulatorCode/SshDelay/./SshDelay.exe
+DELAY_FILE=~/Documents/Research/NetworkSimulatorCode/SshDelay/Sam_LegitSet_101208_20000.ipd
+TEMP_FILE=temp.txt
+
+echo Sending the IPDs
+
+#Here we need to start sending the IPDs
+$SSH_DELAY < $DELAY_FILE | ssh -p $GQ_PORT $GQ_USER@$GQ_REMOTE

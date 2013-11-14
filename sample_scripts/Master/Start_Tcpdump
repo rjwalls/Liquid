@@ -1,0 +1,12 @@
+#Create a new directory for the results
+RESULT_DIR=`date '+%m%d%y_%H%M%S'`
+mkdir ~/Documents/Research/Results/$RESULT_DIR
+
+#Spawn tcpdump in a background thread
+sudo tcpdump -i eth0 -q port 6690 > ~/Documents/Research/Results/$RESULT_DIR/capture_remote.txt &
+ 
+#This is required otherwise the process will NOT start!
+sleep 1
+
+exit
+

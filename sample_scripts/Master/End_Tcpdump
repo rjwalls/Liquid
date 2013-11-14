@@ -1,0 +1,6 @@
+#kill tcpdump in a background thread
+sudo kill -9 `pgrep tcpdump`
+ 
+sleep 1
+
+exit

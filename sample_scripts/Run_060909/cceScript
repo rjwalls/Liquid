@@ -1,0 +1,15 @@
+echo Started at:
+date
+./cce 65536 1 0 061009_092002/capture_061009_1992.ipd 0 TrainingSet_0s_060909.ipd > 061009_092002/Results_EN.txt
+./cce 5 50 0 061009_092002/capture_061009_1992.ipd 0 TrainingSet_0s_060909.ipd > 061009_092002/Results_CCE.txt
+./cceSingPat 65536 1 0 061009_092002/capture_061009_1992.ipd 0 TrainingSet_0s_060909.ipd > 061009_092002/Results_EN_SingPat.txt
+./cce 65536 1 0 061009_093350/capture_061009_2015.ipd 0 TrainingSet_0s_060909.ipd > 061009_093350/Results_EN.txt
+./cce 5 50 0 061009_093350/capture_061009_2015.ipd 0 TrainingSet_0s_060909.ipd > 061009_093350/Results_CCE.txt
+./cceSingPat 65536 1 0 061009_093350/capture_061009_2015.ipd 0 TrainingSet_0s_060909.ipd > 061009_093350/Results_EN_SingPat.txt
+./cce 65536 1 0 061009_094737/capture_061009_2014.ipd 0 TrainingSet_0s_060909.ipd > 061009_094737/Results_EN.txt
+./cce 5 50 0 061009_094737/capture_061009_2014.ipd 0 TrainingSet_0s_060909.ipd > 061009_094737/Results_CCE.txt
+./cceSingPat 65536 1 0 061009_094737/capture_061009_2014.ipd 0 TrainingSet_0s_060909.ipd > 061009_094737/Results_EN_SingPat.txt
+echo Ended at:
+date
+NOTIFICATION_EMAIL=REDACTED
+echo "=^..^=" | mail -s "CCE Finished" $NOTIFICATION_EMAIL

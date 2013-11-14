@@ -1,0 +1,34 @@
+echo Started at:
+date
+echo **********************************************************************
+echo Starting JBugRnd
+DELAY_INPUT_FILE=~/Documents/Research/Samples/IPDs/TestSets/062409/JBugRnd_062409_200000.ipd
+export DELAY_INPUT_FILE
+echo $DELAY_INPUT_FILE
+.././Master/Start_End_Tcpdump_Remote
+echo **********************************************************************
+echo **********************************************************************
+echo Starting JBugNonRnd
+DELAY_INPUT_FILE=~/Documents/Research/Samples/IPDs/TestSets/062409/JBugNonRnd_062409_200000.ipd
+export DELAY_INPUT_FILE
+echo $DELAY_INPUT_FILE
+.././Master/Start_End_Tcpdump_Remote
+echo **********************************************************************
+echo **********************************************************************
+echo Starting JBugShaping
+DELAY_INPUT_FILE=~/Documents/Research/Samples/IPDs/TestSets/062409/JBugShaping_062409_200000.ipd
+export DELAY_INPUT_FILE
+echo $DELAY_INPUT_FILE
+.././Master/Start_End_Tcpdump_Remote
+echo **********************************************************************
+echo **********************************************************************
+echo Starting Legit
+DELAY_INPUT_FILE=~r/Documents/Research/Samples/IPDs/TestSets/062409/Legit_062409_200000.ipd
+export DELAY_INPUT_FILE
+echo $DELAY_INPUT_FILE
+.././Master/Start_End_Tcpdump_Remote
+echo **********************************************************************
+echo Ended at:
+date
+NOTIFICATION_EMAIL=YOUR_EMAIL_HERE
+echo "=^..^=" | mail -s "Experiment Finished" $NOTIFICATION_EMAIL
