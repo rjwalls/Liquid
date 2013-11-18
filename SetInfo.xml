@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SetInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MessageToEncode>Robert Walls</MessageToEncode>
+  <SampleFilePath>C:\test.ipd</SampleFilePath>
+  <TrainingFilePath>C:\training.ipd</TrainingFilePath>
+  <NumTrainingBins>65536</NumTrainingBins>
+  <SetSize>200000</SetSize>
+  <SampleSize>2000</SampleSize>
+  <IpdThresholdMax>120</IpdThresholdMax>
+  <IpdThresholdMin>0.001</IpdThresholdMin>
+  <MasterSetDirectory>C:\Documents and Settings\Wallsr\My Documents\Research\Samples\IPDs\TestSets</MasterSetDirectory>
+  <MasterScriptDirectory>C:\Documents and Settings\Wallsr\My Documents\Research\Scripts</MasterScriptDirectory>
+  <UseCorrelated>true</UseCorrelated>
+  <CreateDriverScript>true</CreateDriverScript>
+  <JBugInfo>
+    <TimingWindowMs>20</TimingWindowMs>
+    <RotateSequenceLength>2000</RotateSequenceLength>
+    <ShapingIncrement>0.001</ShapingIncrement>
+    <KMax>120</KMax>
+    <KMin>90</KMin>
+    <LMax>120</LMax>
+    <LMin>90</LMin>
+    <PenaltyForBin>1</PenaltyForBin>
+    <PenaltyForDist>0</PenaltyForDist>
+    <MaxShapingDelaySeconds>0.020</MaxShapingDelaySeconds>
+  </JBugInfo>
+</SetInfo>
